@@ -1,0 +1,10 @@
+body{
+  font-family:sans-serif;
+  background-color: #F5F5F5;
+
+}
+.weather-card {
+  background: linear-gradient(to bottom, #87CEFA, #78BFEB);
+  border: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}

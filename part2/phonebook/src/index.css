@@ -1,0 +1,10 @@
+
+.card{
+  box-shadow:8px 8px 8px lightgray;
+  border-radius:15px;
+  overflow-y:scroll;
+}
+.scroll-container{
+  height:50vh;
+  
+}
