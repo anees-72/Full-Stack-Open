@@ -1,4 +1,5 @@
 const express = require('express')
+const { builtinModules } = require('module')
 const app = express()
 const morgan = require('morgan')
 morgan.token('type',(req,res)=>{
@@ -32,7 +33,7 @@ let notes = [
 ]
 
 app.get('/',(request,response)=>{
-   response.sendFile(path.resolve(__dirname,'dist','index.html'))
+   response.sendFile(path.resolve(__dirname,'..','dist','index.html'))
 })
 app.get('/api/persons',(request,response)=>{
     response.json(notes)
@@ -85,3 +86,4 @@ app.post('/api/persons', (request, response) => {
 
 const PORT =3001
 app.listen(PORT)
+module.exports=app
