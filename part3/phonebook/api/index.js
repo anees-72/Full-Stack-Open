@@ -33,7 +33,7 @@ let notes = [
 ]
 
 app.get('/',(request,response)=>{
-   response.sendFile(path.resolve(__dirname,'..','dist','index.html'))
+   response.sendFile(path.resolve(__dirname,'..','public','index.html'))
 })
 app.get('/api/persons',(request,response)=>{
     response.json(notes)
