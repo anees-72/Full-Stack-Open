@@ -5,8 +5,8 @@ morgan.token('type',(req,res)=>{
    return JSON.stringify(req.body)
 })
 app.use(morgan(':method :url :status  :response-time ms :type'))
-
-
+const path=require('path')
+app.use(express.static('dist'))
 app.use(express.json())
 let notes = [
     { 
@@ -31,6 +31,9 @@ let notes = [
     }
 ]
 
+app.get('/',(request,response)=>{
+   response.sendFile(path.resolve(__dirname,'dist','index.html'))
+})
 app.get('/api/persons',(request,response)=>{
     response.json(notes)
 })
