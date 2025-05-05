@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const baseUrl = 'https://orange-engine-4jg45v6xqw4924r7-3001.app.github.dev/persons'
+const baseUrl = '/api/persons'
 
 const getAll = () => {
   const request = axios.get(baseUrl)
